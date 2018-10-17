@@ -9,11 +9,9 @@ const knex = require('knex')
 const db =knex({
   client: 'pg',
   connection: {
-    host : 'postgresql-amorphous-72846',
-    user : '',
-    password : '',
-    database : 'celebrity'
-  }
+    host : process.env.DATABASE_URL,
+    ssl:true,
+ }
 });
 
 
